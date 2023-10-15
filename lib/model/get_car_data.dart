@@ -5,11 +5,11 @@ part 'get_car_data.freezed.dart';
 part 'get_car_data.g.dart';
 
 @freezed
-class GetProductData with _$GetProductData {
-  factory GetProductData({
+class GetCarData with _$GetCarData {
+  factory GetCarData({
     required List<Car> cars,
-  }) = _GetProductData;
+  }) = _GetCarData;
 
-  factory GetProductData.fromJson(Map<String, dynamic> json) =>
-      _$GetProductDataFromJson(json);
+  factory GetCarData.fromJson(Map<String, dynamic> json) =>
+      _$GetCarDataFromJson(json);
 }

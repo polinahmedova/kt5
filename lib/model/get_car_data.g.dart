@@ -6,15 +6,14 @@ part of 'get_car_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetProductDataImpl _$$GetProductDataImplFromJson(Map<String, dynamic> json) =>
-    _$GetProductDataImpl(
+_$GetCarDataImpl _$$GetCarDataImplFromJson(Map<String, dynamic> json) =>
+    _$GetCarDataImpl(
       cars: (json['cars'] as List<dynamic>)
           .map((e) => Car.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$GetProductDataImplToJson(
-        _$GetProductDataImpl instance) =>
+Map<String, dynamic> _$$GetCarDataImplToJson(_$GetCarDataImpl instance) =>
     <String, dynamic>{
       'cars': instance.cars,
     };

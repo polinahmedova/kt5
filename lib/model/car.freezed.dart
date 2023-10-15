@@ -20,13 +20,32 @@ Car _$CarFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Car {
+  @JsonKey(name: 'car')
+  String get brand => throw _privateConstructorUsedError;
+  @JsonKey(name: 'car_model')
+  String get model => throw _privateConstructorUsedError;
+  @JsonKey(name: 'car_color')
+  String get color => throw _privateConstructorUsedError;
+  @Converter()
+  double get price => throw _privateConstructorUsedError;
+  bool get availability => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CarCopyWith<Car> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CarCopyWith<$Res> {
   factory $CarCopyWith(Car value, $Res Function(Car) then) =
       _$CarCopyWithImpl<$Res, Car>;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'car') String brand,
+      @JsonKey(name: 'car_model') String model,
+      @JsonKey(name: 'car_color') String color,
+      @Converter() double price,
+      bool availability});
 }
 
 /// @nodoc
@@ -37,12 +56,53 @@ class _$CarCopyWithImpl<$Res, $Val extends Car> implements $CarCopyWith<$Res> {
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? brand = null,
+    Object? model = null,
+    Object? color = null,
+    Object? price = null,
+    Object? availability = null,
+  }) {
+    return _then(_value.copyWith(
+      brand: null == brand
+          ? _value.brand
+          : brand // ignore: cast_nullable_to_non_nullable
+              as String,
+      model: null == model
+          ? _value.model
+          : model // ignore: cast_nullable_to_non_nullable
+              as String,
+      color: null == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as double,
+      availability: null == availability
+          ? _value.availability
+          : availability // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$CarImplCopyWith<$Res> {
+abstract class _$$CarImplCopyWith<$Res> implements $CarCopyWith<$Res> {
   factory _$$CarImplCopyWith(_$CarImpl value, $Res Function(_$CarImpl) then) =
       __$$CarImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'car') String brand,
+      @JsonKey(name: 'car_model') String model,
+      @JsonKey(name: 'car_color') String color,
+      @Converter() double price,
+      bool availability});
 }
 
 /// @nodoc
@@ -50,30 +110,97 @@ class __$$CarImplCopyWithImpl<$Res> extends _$CarCopyWithImpl<$Res, _$CarImpl>
     implements _$$CarImplCopyWith<$Res> {
   __$$CarImplCopyWithImpl(_$CarImpl _value, $Res Function(_$CarImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? brand = null,
+    Object? model = null,
+    Object? color = null,
+    Object? price = null,
+    Object? availability = null,
+  }) {
+    return _then(_$CarImpl(
+      brand: null == brand
+          ? _value.brand
+          : brand // ignore: cast_nullable_to_non_nullable
+              as String,
+      model: null == model
+          ? _value.model
+          : model // ignore: cast_nullable_to_non_nullable
+              as String,
+      color: null == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as double,
+      availability: null == availability
+          ? _value.availability
+          : availability // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$CarImpl implements _Car {
-  _$CarImpl();
+  _$CarImpl(
+      {@JsonKey(name: 'car') required this.brand,
+      @JsonKey(name: 'car_model') required this.model,
+      @JsonKey(name: 'car_color') required this.color,
+      @Converter() required this.price,
+      required this.availability});
 
   factory _$CarImpl.fromJson(Map<String, dynamic> json) =>
       _$$CarImplFromJson(json);
 
   @override
+  @JsonKey(name: 'car')
+  final String brand;
+  @override
+  @JsonKey(name: 'car_model')
+  final String model;
+  @override
+  @JsonKey(name: 'car_color')
+  final String color;
+  @override
+  @Converter()
+  final double price;
+  @override
+  final bool availability;
+
+  @override
   String toString() {
-    return 'Car()';
+    return 'Car(brand: $brand, model: $model, color: $color, price: $price, availability: $availability)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CarImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$CarImpl &&
+            (identical(other.brand, brand) || other.brand == brand) &&
+            (identical(other.model, model) || other.model == model) &&
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.price, price) || other.price == price) &&
+            (identical(other.availability, availability) ||
+                other.availability == availability));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, brand, model, color, price, availability);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CarImplCopyWith<_$CarImpl> get copyWith =>
+      __$$CarImplCopyWithImpl<_$CarImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -84,7 +211,31 @@ class _$CarImpl implements _Car {
 }
 
 abstract class _Car implements Car {
-  factory _Car() = _$CarImpl;
+  factory _Car(
+      {@JsonKey(name: 'car') required final String brand,
+      @JsonKey(name: 'car_model') required final String model,
+      @JsonKey(name: 'car_color') required final String color,
+      @Converter() required final double price,
+      required final bool availability}) = _$CarImpl;
 
   factory _Car.fromJson(Map<String, dynamic> json) = _$CarImpl.fromJson;
+
+  @override
+  @JsonKey(name: 'car')
+  String get brand;
+  @override
+  @JsonKey(name: 'car_model')
+  String get model;
+  @override
+  @JsonKey(name: 'car_color')
+  String get color;
+  @override
+  @Converter()
+  double get price;
+  @override
+  bool get availability;
+  @override
+  @JsonKey(ignore: true)
+  _$$CarImplCopyWith<_$CarImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

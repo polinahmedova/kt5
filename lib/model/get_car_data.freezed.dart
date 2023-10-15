@@ -14,33 +14,33 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-GetProductData _$GetProductDataFromJson(Map<String, dynamic> json) {
-  return _GetProductData.fromJson(json);
+GetCarData _$GetCarDataFromJson(Map<String, dynamic> json) {
+  return _GetCarData.fromJson(json);
 }
 
 /// @nodoc
-mixin _$GetProductData {
+mixin _$GetCarData {
   List<Car> get cars => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetProductDataCopyWith<GetProductData> get copyWith =>
+  $GetCarDataCopyWith<GetCarData> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GetProductDataCopyWith<$Res> {
-  factory $GetProductDataCopyWith(
-          GetProductData value, $Res Function(GetProductData) then) =
-      _$GetProductDataCopyWithImpl<$Res, GetProductData>;
+abstract class $GetCarDataCopyWith<$Res> {
+  factory $GetCarDataCopyWith(
+          GetCarData value, $Res Function(GetCarData) then) =
+      _$GetCarDataCopyWithImpl<$Res, GetCarData>;
   @useResult
   $Res call({List<Car> cars});
 }
 
 /// @nodoc
-class _$GetProductDataCopyWithImpl<$Res, $Val extends GetProductData>
-    implements $GetProductDataCopyWith<$Res> {
-  _$GetProductDataCopyWithImpl(this._value, this._then);
+class _$GetCarDataCopyWithImpl<$Res, $Val extends GetCarData>
+    implements $GetCarDataCopyWith<$Res> {
+  _$GetCarDataCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -62,22 +62,22 @@ class _$GetProductDataCopyWithImpl<$Res, $Val extends GetProductData>
 }
 
 /// @nodoc
-abstract class _$$GetProductDataImplCopyWith<$Res>
-    implements $GetProductDataCopyWith<$Res> {
-  factory _$$GetProductDataImplCopyWith(_$GetProductDataImpl value,
-          $Res Function(_$GetProductDataImpl) then) =
-      __$$GetProductDataImplCopyWithImpl<$Res>;
+abstract class _$$GetCarDataImplCopyWith<$Res>
+    implements $GetCarDataCopyWith<$Res> {
+  factory _$$GetCarDataImplCopyWith(
+          _$GetCarDataImpl value, $Res Function(_$GetCarDataImpl) then) =
+      __$$GetCarDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<Car> cars});
 }
 
 /// @nodoc
-class __$$GetProductDataImplCopyWithImpl<$Res>
-    extends _$GetProductDataCopyWithImpl<$Res, _$GetProductDataImpl>
-    implements _$$GetProductDataImplCopyWith<$Res> {
-  __$$GetProductDataImplCopyWithImpl(
-      _$GetProductDataImpl _value, $Res Function(_$GetProductDataImpl) _then)
+class __$$GetCarDataImplCopyWithImpl<$Res>
+    extends _$GetCarDataCopyWithImpl<$Res, _$GetCarDataImpl>
+    implements _$$GetCarDataImplCopyWith<$Res> {
+  __$$GetCarDataImplCopyWithImpl(
+      _$GetCarDataImpl _value, $Res Function(_$GetCarDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$GetProductDataImplCopyWithImpl<$Res>
   $Res call({
     Object? cars = null,
   }) {
-    return _then(_$GetProductDataImpl(
+    return _then(_$GetCarDataImpl(
       cars: null == cars
           ? _value._cars
           : cars // ignore: cast_nullable_to_non_nullable
@@ -96,11 +96,11 @@ class __$$GetProductDataImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$GetProductDataImpl implements _GetProductData {
-  _$GetProductDataImpl({required final List<Car> cars}) : _cars = cars;
+class _$GetCarDataImpl implements _GetCarData {
+  _$GetCarDataImpl({required final List<Car> cars}) : _cars = cars;
 
-  factory _$GetProductDataImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetProductDataImplFromJson(json);
+  factory _$GetCarDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetCarDataImplFromJson(json);
 
   final List<Car> _cars;
   @override
@@ -112,14 +112,14 @@ class _$GetProductDataImpl implements _GetProductData {
 
   @override
   String toString() {
-    return 'GetProductData(cars: $cars)';
+    return 'GetCarData(cars: $cars)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetProductDataImpl &&
+            other is _$GetCarDataImpl &&
             const DeepCollectionEquality().equals(other._cars, _cars));
   }
 
@@ -131,29 +131,27 @@ class _$GetProductDataImpl implements _GetProductData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetProductDataImplCopyWith<_$GetProductDataImpl> get copyWith =>
-      __$$GetProductDataImplCopyWithImpl<_$GetProductDataImpl>(
-          this, _$identity);
+  _$$GetCarDataImplCopyWith<_$GetCarDataImpl> get copyWith =>
+      __$$GetCarDataImplCopyWithImpl<_$GetCarDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetProductDataImplToJson(
+    return _$$GetCarDataImplToJson(
       this,
     );
   }
 }
 
-abstract class _GetProductData implements GetProductData {
-  factory _GetProductData({required final List<Car> cars}) =
-      _$GetProductDataImpl;
+abstract class _GetCarData implements GetCarData {
+  factory _GetCarData({required final List<Car> cars}) = _$GetCarDataImpl;
 
-  factory _GetProductData.fromJson(Map<String, dynamic> json) =
-      _$GetProductDataImpl.fromJson;
+  factory _GetCarData.fromJson(Map<String, dynamic> json) =
+      _$GetCarDataImpl.fromJson;
 
   @override
   List<Car> get cars;
   @override
   @JsonKey(ignore: true)
-  _$$GetProductDataImplCopyWith<_$GetProductDataImpl> get copyWith =>
+  _$$GetCarDataImplCopyWith<_$GetCarDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

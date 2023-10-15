@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:kt5/model/car.dart';
 
-class ProductWidget extends StatelessWidget {
-  final Product product;
+class CarWidget extends StatelessWidget {
+  final Car product;
 
   @override
   Widget build(BuildContext context) {
