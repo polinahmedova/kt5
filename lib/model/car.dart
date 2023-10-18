@@ -4,6 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'car.freezed.dart';
 part 'car.g.dart';
 
+//сюда прописываем необходимые нам поля: цена, модель, марка, наличие, цвет
 class Converter implements JsonConverter<double, dynamic> {
   const Converter();
   @override
